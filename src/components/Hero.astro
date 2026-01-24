@@ -1,0 +1,85 @@
+---
+/*
+  HERO SECTION - ARUNA
+
+  Placeholder para video/imagen:
+  - VIDEO (recomendado): hero-video.mp4
+    Idea: Tamara en el estudio, de espaldas o perfil, haciendo una respiracion
+    profunda con los ojos cerrados. Luz natural entrando por la ventana.
+    Movimiento minimo, solo el subir y bajar del pecho al respirar.
+    Transmite: "aqui hay calma, aqui puedes parar"
+
+  - IMAGEN alternativa: hero-image.jpg
+    Idea: Vista del estudio vacio con luz de manana. Un mat desenrollado
+    esperando. O Tamara sentada en meditacion, vista desde atras.
+    Transmite: "este espacio te esta esperando"
+
+  Especificaciones:
+  - Video: MP4 (H.264), 10-15 seg loop, sin audio, 1920x1080 min
+  - Imagen: JPG/WebP, 1920px ancho minimo, luz natural, tonos calidos
+*/
+---
+
+<section id="inicio" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <!-- Background Video/Image Container -->
+  <div class="absolute inset-0">
+    <!-- VIDEO: Descomentar cuando tengas el video -->
+    <!--
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/hero-video.mp4" type="video/mp4" />
+    </video>
+    -->
+
+    <!-- IMAGEN: Placeholder mientras no hay video -->
+    <div class="absolute inset-0 bg-gradient-to-b from-beige-claro/30 to-crema/50"></div>
+
+    <!-- Cuando tengas la imagen, reemplaza el div anterior con: -->
+    <!--
+    <img
+      src="/hero-image.jpg"
+      alt="Estudio ARUNA"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    -->
+
+    <!-- Overlay sutil para legibilidad del texto -->
+    <div class="absolute inset-0 bg-crema/40"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+    <div class="stagger">
+      <h1 class="fade-up text-4xl md:text-5xl lg:text-6xl text-stone mb-6 font-light">
+        Un espacio para volver a ti
+      </h1>
+
+      <p class="fade-up text-lg md:text-xl text-stone-light font-light tracking-wide">
+        Respira. Suelta. Reconectate.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scroll indicator - posicionado respecto a la seccion completa -->
+  <div class="fade-up absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+    <a
+      href="#sobre-aruna"
+      class="block text-stone-light hover:text-caramelo animate-bounce"
+      aria-label="Continuar"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+        />
+      </svg>
+    </a>
+  </div>
+</section>

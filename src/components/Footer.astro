@@ -1,0 +1,78 @@
+---
+const currentYear = new Date().getFullYear()
+
+const navLinks = [
+  { href: '#inicio', label: 'Inicio' },
+  { href: '#sobre-aruna', label: 'Sobre ARUNA' },
+  { href: '#practica', label: 'Clases' },
+  { href: '#contacto', label: 'Contacto' },
+]
+
+const socialLinks = [
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/aruna.vinyasayoga',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="1.5"/>
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="1.5"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="1.5"/>
+    </svg>`,
+  },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/aruna.vinyasayoga',
+    icon: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+    </svg>`,
+  },
+]
+---
+
+<footer class="bg-beige-claro/50 py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Logo -->
+      <a href="#inicio" class="flex-shrink-0">
+        <img
+          src="/logo.png"
+          alt="ARUNA Vinyasa Yoga"
+          class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+        />
+      </a>
+
+      <!-- Navigation -->
+      <nav class="flex flex-wrap justify-center gap-6">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class="text-stone-light hover:text-stone text-sm tracking-wide"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-4">
+        {socialLinks.map(link => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.name}
+            class="text-stone-light hover:text-stone transition-colors"
+            set:html={link.icon}
+          />
+        ))}
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-beige-medio/30 mt-8 pt-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-beige-oscuro">
+        <p>ARUNA Vinyasa Yoga &mdash; Un espacio para volver a ti</p>
+        <p>&copy; {currentYear} ARUNA. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
