@@ -1,30 +1,10 @@
 ---
-/*
-  HERO SECTION - ARUNA
-
-  Placeholder para video/imagen:
-  - VIDEO (recomendado): hero-video.mp4
-    Idea: Tamara en el estudio, de espaldas o perfil, haciendo una respiracion
-    profunda con los ojos cerrados. Luz natural entrando por la ventana.
-    Movimiento minimo, solo el subir y bajar del pecho al respirar.
-    Transmite: "aqui hay calma, aqui puedes parar"
-
-  - IMAGEN alternativa: hero-image.jpg
-    Idea: Vista del estudio vacio con luz de manana. Un mat desenrollado
-    esperando. O Tamara sentada en meditacion, vista desde atras.
-    Transmite: "este espacio te esta esperando"
-
-  Especificaciones:
-  - Video: MP4 (H.264), 10-15 seg loop, sin audio, 1920x1080 min
-  - Imagen: JPG/WebP, 1920px ancho minimo, luz natural, tonos calidos
-*/
+/* HERO SECTION - ARUNA */
 ---
 
 <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-  <!-- Background Video/Image Container -->
+  <!-- Background Video -->
   <div class="absolute inset-0">
-    <!-- VIDEO: Descomentar cuando tengas el video -->
-    <!--
     <video
       autoplay
       muted
@@ -34,22 +14,9 @@
     >
       <source src="/hero-video.mp4" type="video/mp4" />
     </video>
-    -->
 
-    <!-- IMAGEN: Placeholder mientras no hay video -->
-    <div class="absolute inset-0 bg-gradient-to-b from-beige-claro/30 to-crema/50"></div>
-
-    <!-- Cuando tengas la imagen, reemplaza el div anterior con: -->
-    <!--
-    <img
-      src="/hero-image.jpg"
-      alt="Estudio ARUNA"
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-    -->
-
-    <!-- Overlay sutil para legibilidad del texto -->
-    <div class="absolute inset-0 bg-crema/40"></div>
+    <!-- Overlay para legibilidad del texto -->
+    <div class="absolute inset-0 bg-crema/50"></div>
   </div>
 
   <!-- Content -->
@@ -60,12 +27,12 @@
       </h1>
 
       <p class="fade-up text-lg md:text-xl text-stone-light font-light tracking-wide">
-        Respira. Suelta. Reconectate.
+        Respira &mdash; Suelta &mdash; Habítate
       </p>
     </div>
   </div>
 
-  <!-- Scroll indicator - posicionado respecto a la seccion completa -->
+  <!-- Scroll indicator -->
   <div class="fade-up absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
     <a
       href="#sobre-aruna"
